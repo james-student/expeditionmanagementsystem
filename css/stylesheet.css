@@ -121,7 +121,7 @@ a:hover {
 	background-color: var(--live-background);
 }
 
-.button {
+.standardbutton {
 	background-color: var(--live-link);
   	border: none;
   	color: white;
