@@ -1,59 +1,92 @@
-<! DOCTYPE html>
-<html>
+<!doctype html>
 <html lang="en-GB" id="root_expedition_management_system">
-<head>
-
-    <!-- Required meta tags -->
+	<head>
+		<!-- Required meta tags -->
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-		<!-- Strcutured meta tags -->
+		<!-- Structured data meta tags -->
 		<title>Expedition Management System</title>
-		<meta name="description" content="System to track teams on small and large-scale expeditions">
+		<meta name="description" content="A system to track teams on small and large scale expeditions.">
 		<meta name="author" content="James Swallow">
 		<meta property="og:title" content="Expedition Management System">
-		<meta property="og:description" content="System to track teams on small and large-scale expeditions.">
+		<meta property="og:description" content="A system to track teams on small and large scale expeditions.">
 		<meta property="og:url" content="https://jamesmsnsixth.github.io/expeditionmanagementsystem>
 		<meta property="og:locale" content="en_GB">
 		<meta property="og:image" content="">
 		<meta property="og:type" content="website">
 		<meta property="og:site_name" content="jamesmsnsixth.github.io/expeditionmanagementsystem">
-                                                                                              
-                                                                                              
+													  
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    
+		
 		<!-- Custom styles -->
 		<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
-
-</head>
-
-<body>
-	<h1>
-		<script>
-			var Digital=new Date()
-			var hours=Digital.getHours()
-									   
-			if (hours>=4&&hours<=11) //4am to midday
-			document.write('Good morning, welcome to the Expedition Management System<span class="accent_colour">.</span>')
-			else if (hours>=12&&hours<=17) //midday to 6pm
-			document.write('Good afternoon, welcome to the Expedition Management System<span class="accent_colour">.</span>')
-			else if (hours>=18&&hours<=23) //6pm to midnight
-			document.write('Good evening, welcome to the Expedition Management System<span class="accent_colour">.</span>')
-			else //Midnight to 4am
-			document.write('Greetings, night owl, welcome to the Expedition Management System<span class="accent_colour">.</span>')
-		</script>
+	</head>
+	<body>
+		<div class="container">
+			<h1>
+				<script>
+					var Digital=new Date()
+					var hours=Digital.getHours()
+					if (hours>=4&&hours<=11) //4am to midday
+					document.write('Good morning, welcome to the Expedition Management System<span class="accent_colour">.</span>')
+					else if (hours>=12&&hours<=17) //midday to 6pm
+					document.write('Good afternoon, welcome to the Expedition Management System<s<span class="accent_colour">.</span>')
+					else if (hours>=18&&hours<=23) //6pm to midnight
+					document.write('Good evening, welcome to the Expedition Management System<s<span class="accent_colour">.</span>')
+					else //Midnight to 4am
+					document.write('Greetings, night owl, welcome to the Expedition Management System<s<span class="accent_colour">.</span>')
+				</script>
 			</h1>
-																  
-	<p><span>class="accent_colour">Here is some accent text.</span></p>											    
-</body>
-
+								
+			
+		<footer class="footer fixed-bottom">
+			<div class="container">
+				
+				<script>
+					window.onload = function() {
+						clock();  
+						function clock() {
+							var now = new Date();
+							var TwentyFourHour = now.getHours();
+							var hour = now.getHours();
+							var min = now.getMinutes();
+							var mid = 'pm';
+							if (min < 10) {
+								min = "0" + min;
+							}
+							if (hour > 12) {
+								hour = hour - 12;
+							}    
+							if(hour==0){ 
+								hour=12;
+							}
+							if(TwentyFourHour < 12) {
+								mid = 'am';
+							}     
+							document.getElementById('current_time').innerHTML = hour+':'+min + mid ;
+    						setTimeout(clock, 1000);
+						}
+					}
+				</script>
+				<span class="text-muted" id="current_time"></span>
+				<span class="text-muted">— Expedition Management System</span>
+			</div>
+		</footer>
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	</body>
 	<script type="text/javascript">
 		var currentTime = new Date().getHours();
 		if (6 <= currentTime && currentTime < 21) {
-				document.getElementById("root_expedition_management_system").className = "appearance_day";
+				document.getElementById("root_expedition_maangement_system").className = "appearance_day";
 		}
 		else {
 				document.getElementById("root_expedition_management_system").className = "appearance_night";
 		}
-	</script>																    
+	</script>
+</html>
