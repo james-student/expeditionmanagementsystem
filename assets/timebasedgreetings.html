@@ -1,0 +1,14 @@
+<!-- Time-based greetings template -->
+
+<script>
+					var Digital=new Date()
+					var hours=Digital.getHours()
+					if (hours>=4&&hours<=11) //4am to midday
+					document.write('Good morning, welcome to the Expedition Management System<span class="accent_colour">.</span>')
+					else if (hours>=12&&hours<=17) //midday to 6pm
+					document.write('Good afternoon, welcome to the Expedition Management System<s<span class="accent_colour">.</span>')
+					else if (hours>=18&&hours<=23) //6pm to midnight
+					document.write('Good evening, welcome to the Expedition Management System<s<span class="accent_colour">.</span>')
+					else //Midnight to 4am
+					document.write('Greetings, night owl, welcome to the Expedition Management System<s<span class="accent_colour">.</span>')
+</script>
