@@ -4,4 +4,4 @@ This project is currently under development for an Advanced Level GCE qualificat
 
 This licence will be waived at the end of the live examination series and updated.
 
-Whilst this filed (LICENCE.MD) is present in the repository, the regulations above apply.
+Whilst this file (LICENCE.MD) is present in the repository, the regulations above apply.
