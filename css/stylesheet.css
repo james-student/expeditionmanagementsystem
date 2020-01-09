@@ -103,6 +103,11 @@ a:hover {
 	--live-hover: var(--accent-hover-dark);
 }
 
+.centerImage { /* Class for centralising images */
+	text-align:center;
+ 	display:block;
+}
+
 #current_time {
 	font-weight: bold;
 }
