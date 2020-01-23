@@ -125,6 +125,8 @@ a:hover {
 	font-weight: bold;
 }
 
+#mainmap { height: 180px; }
+
 @media (prefers-color-scheme: dark) { /* Preference-based dark-mode switching */
 	/*.appearance_day {
 		filter: var(--dark-mode-invert);
