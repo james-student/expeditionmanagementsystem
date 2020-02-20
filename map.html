@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en-GB" id="root_expedition_management_system">
+<html lang="en-GB" id="map_expedition_management_system">
 	<head>
 		<!-- Required meta tags -->
 		<meta charset="utf-8">
@@ -24,45 +24,45 @@
 		<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 										
 		<!-- Leaflet -->
-		
-		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+		<link rel="stylesheet" href="leaflet/leaflet.css" />
+    <script src="leaflet/leaflet.js"></script>
+   
+   <script language="javascript">
+      function init() {
+         var map = new L.Map('map');                       
+                
+      	 L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
+            maxZoom: 18
+         }).addTo(map);
+         map.attributionControl.setPrefix(''); // Don't show the 'Powered by Leaflet' text.
 
-		<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-		
-		<style>
-		#map {
-    		width: 960px;
-    		height:500px;
-		}
-		</style>
+         var london = new L.LatLng(51.505, -0.09); 
+         map.setView(london, 13);
+               
+         //set up a standalone popup (use a popup as a layer)
+         var popup = L.popup()
+              .setLatLng([51.5, -0.09])
+              .setContent("I am a standalone popup.")
+              .openOn(map);
 
+      }
+   </script>
+		
 	</head>
-	<body>
+																										
+	<body onLoad="javascript:init();>
 		<div class="container">
 			<h1>Location Map<span class="accent_colour">.</span></h1>
-			
-			<div id="map"></div>
-
-			<script>
-
-    			var map = L.map('map',{
-    			center: [43.64701, -79.39425],
-    			zoom: 15
-    			});
-
-    			L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-    			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-    			}).addTo(map);
-
-			</script>
-
+		   
+			<div id="map" style="height: 200px"></div>
 											 
 												      
 		</div>
 								
 			
 		<footer class="footer fixed-bottom">
-			<div class="container">
+		<div class="container">
 				
 				<script>
 					window.onload = function() {
@@ -103,10 +103,10 @@
 	<script type="text/javascript">
 		var currentTime = new Date().getHours();
 		if (6 <= currentTime && currentTime < 21) {
-				document.getElementById("root_expedition_management_system").className = "appearance_day";
+				document.getElementById("map_expedition_management_system").className = "appearance_day";
 		}
 		else {
-				document.getElementById("root_expedition_management_system").className = "appearance_night";
+				document.getElementById("map_expedition_management_system").className = "appearance_night";
 		}
 	</script>
 </html>
