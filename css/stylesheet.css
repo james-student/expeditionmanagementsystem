@@ -48,6 +48,7 @@ p {
 	/*line-height: 1.2em;*/
 }
 
+
 a {
 	color: var(--live-link);
 }
@@ -59,6 +60,9 @@ a:hover {
 .accent_colour {
 	color: var(--live-link) !important;
 }
+
+.bordersolid {
+  border: 1px solid black;
 
 .section_heading {
 	padding-top: 1.5rem;
