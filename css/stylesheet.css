@@ -61,10 +61,6 @@ a:hover {
 	color: var(--live-link) !important;
 }
 
-.bordersolid {
-  border: 1px solid black;
-}
-
 .section_heading {
 	padding-top: 1.5rem;
 	padding-bottom: .5rem;
