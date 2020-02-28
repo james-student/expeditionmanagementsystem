@@ -18,6 +18,9 @@
 		<meta property="og:type" content="website">
 		<meta property="og:site_name" content="jamesmsnsixth.github.io/expeditionmanagementsystem">
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+										
+		<!-- Refresh page every 2 minutes -->
+		<meta http-equiv="Refresh" content="120">
 													 													  
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -62,6 +65,9 @@
 				<div class="col-sm-6">
 					<h2>Live Map<span class="accent_colour">.</span></h2>
 					<iframe style="width: 40vw;height: 50vh;position: relative;" src="/expeditionmanagementsystem/mapping/render.html"></iframe>
+					<FORM>
+					<INPUT TYPE="button" onClick="history.go(0)" VALUE="Refresh">
+					</FORM>
 				</div>
 						     
 				
